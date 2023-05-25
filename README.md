@@ -1,10 +1,9 @@
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/91223726/216793567-00f59f4e-7327-4211-be05-b852232e90e3.png" align="center">
+  <img src="https://icon-library.com/images/lite-icon/lite-icon-13.jpg" align="center">
 </p>
 
 <h4 align="center">
   It's like an operating system in your browser!<br>
-  <a href="https://gitlab.com/lukasexists/redstone-nw.netlify.app/-/tree/main/clockwork-app">SOURCE</a> - <a href="https://redstone-nw.netlify.app/clockwork/index.html">WEBSITE</a><br>
 </h4>
 
 <!-- ABOUT SECTION -->
