@@ -1,11 +1,29 @@
 <!DOCTYPE html><html><head></head><body onload="startLoop()" style="display:none;">
-  
+  <button id="install" hidden>Install</button>
   <title>LightHome Brew OS</title>
   <link rel="shortcut icon" type="image/png" href="images/LHBOS-icon.png">
   <link href="css/clockstyle.css" rel="stylesheet" id="stylesheet" type="text/css">
   <link href="css/appstyle.css" rel="stylesheet" id="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" class="donotremove-ss">
+<script>
+  let installPrompt = null;
+const installButton = document.querySelector("#install");
 
+window.addEventListener("beforeinstallprompt", (event) => {
+  event.preventDefault();
+  installPrompt = event;
+  installButton.removeAttribute("hidden");
+});
+installButton.addEventListener("click", async () => {
+  if (!installPrompt) {
+    return;
+  }
+  const result = await installPrompt.prompt();
+  console.log(`Install prompt was: ${result.outcome}`);
+  installPrompt = null;
+  installButton.setAttribute("hidden", "");
+});
+</script>
 
   <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
 
